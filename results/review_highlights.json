@@ -1,0 +1,83 @@
+{
+  "status": "Reviewed reference-model results, not validation of translations.",
+  "reviewed_pr_head": "ef793ec09045d05a076ea47299012f22cc8cfa71",
+  "source": {
+    "bytes": 1609137,
+    "git_blob_sha": "ef41c58802a3135f295072ba60fc0df39450a10c",
+    "sha256": "4da8e1f9693d30880ee505e56541fc189add70605bad88436c44a8e11a57764c",
+    "upstream_commit": "43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a",
+    "url": "https://raw.githubusercontent.com/mwenge/lineara.xyz/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/LinearAInscriptions.js"
+  },
+  "affix_summary": {
+    "limitations": [
+      "Exact conditional on fixed margins and within-length exchangeability; not a generative language model.",
+      "Lexical, spelling, site and scribal dependencies are not fully controlled.",
+      "Holm correction is within each side and scope, not across all analytical choices.",
+      "A nonsignificant result does not prove coincidence; an excess does not assign a meaning.",
+      "The fitted-rate model is retained as sensitivity only; its probabilities are estimated then treated as fixed."
+    ],
+    "model": "length_stratified_fixed_margins",
+    "scopes": {
+      "all": {
+        "prefix": {"signs_below_0_05_after_holm": [], "tested_signs": 66, "types": 599},
+        "suffix": {"signs_below_0_05_after_holm": [], "tested_signs": 64, "types": 599}
+      },
+      "tablets": {
+        "prefix": {"signs_below_0_05_after_holm": [], "tested_signs": 60, "types": 437},
+        "suffix": {"signs_below_0_05_after_holm": [], "tested_signs": 60, "types": 437}
+      }
+    },
+    "selected": {
+      "all": {
+        "prefix": [
+          {"expected_conditional": 1.5189333488088674, "expected_fitted": 1.388961038961039, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 4, "p_conditional": 0.05418546642787281, "p_fitted": 0.04450918462467364, "sign": "I", "types": 25},
+          {"expected_conditional": 3.7478487395499847, "expected_fitted": 3.4181030525778016, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 6, "p_conditional": 0.15367117586741164, "p_fitted": 0.12162339747443075, "sign": "A", "types": 66},
+          {"expected_conditional": 0.7176537155790268, "expected_fitted": 0.7114488348530901, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 1, "p_conditional": 0.5357943773563668, "p_fitted": 0.528437050230188, "sign": "TI", "types": 8},
+          {"expected_conditional": 1.0118935928064559, "expected_fitted": 0.94928522804629, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 1, "p_conditional": 0.6601540039674791, "p_fitted": 0.6329936030063669, "sign": "JA", "types": 18},
+          {"expected_conditional": 0.11203319502074689, "expected_fitted": 0.1125, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 0, "p_conditional": 1.0, "p_fitted": 1.0, "sign": "ME", "types": 1},
+          {"expected_conditional": 0.11203319502074689, "expected_fitted": 0.1125, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 0, "p_conditional": 1.0, "p_fitted": 1.0, "sign": "TE", "types": 2}
+        ],
+        "suffix": [
+          {"expected_conditional": 1.987871050111714, "expected_fitted": 1.8156709340919868, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 5, "p_conditional": 0.03470152867030568, "p_fitted": 0.027674669951471546, "sign": "JA", "types": 22},
+          {"expected_conditional": 1.4444815212450066, "expected_fitted": 1.2603199375731564, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 3, "p_conditional": 0.164391948783541, "p_fitted": 0.12129957028205575, "sign": "TI", "types": 23},
+          {"expected_conditional": 0.26345646055189625, "expected_fitted": 0.2419172932330827, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 1, "p_conditional": 0.24210412566400547, "p_fitted": 0.2243520923417031, "sign": "ME", "types": 6},
+          {"expected_conditional": 0.3276122218030932, "expected_fitted": 0.3237696752341104, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 1, "p_conditional": 0.2962702753677857, "p_fitted": 0.2920415471616306, "sign": "A", "types": 4},
+          {"expected_conditional": 2.463501919933455, "expected_fitted": 2.5042676370854355, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 2, "p_conditional": 0.7351146836842182, "p_fitted": 0.7338715501753186, "sign": "TE", "types": 29},
+          {"expected_conditional": 0.6866929750747178, "expected_fitted": 0.7004060784873576, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 0, "p_conditional": 1.0, "p_fitted": 1.0, "sign": "I", "types": 10}
+        ]
+      },
+      "tablets": {
+        "prefix": [
+          {"expected_conditional": 1.9955123410620792, "expected_fitted": 1.2701149425287357, "holm_conditional": 0.45881038768409893, "holm_fitted": 0.06271152505279219, "observed": 6, "p_conditional": 0.007646839794734983, "p_fitted": 0.0010451920842132032, "sign": "A", "types": 41},
+          {"expected_conditional": 0.7169035153328347, "expected_fitted": 0.7172557172557172, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 1, "p_conditional": 0.5311073817643819, "p_fitted": 0.5241576166912053, "sign": "I", "types": 15},
+          {"expected_conditional": 0.32273747195213165, "expected_fitted": 0.3284898806434873, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 0, "p_conditional": 0.9999999999999999, "p_fitted": 0.9999999999999998, "sign": "JA", "types": 5},
+          {"expected_conditional": 0.08376963350785341, "expected_fitted": 0.08421052631578947, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 0, "p_conditional": 1.0, "p_fitted": 1.0, "sign": "ME", "types": 1},
+          {"expected_conditional": 0.08376963350785341, "expected_fitted": 0.08421052631578947, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 0, "p_conditional": 1.0, "p_fitted": 1.0, "sign": "TE", "types": 1},
+          {"expected_conditional": 0.418848167539267, "expected_fitted": 0.4301075268817205, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 0, "p_conditional": 1.0, "p_fitted": 1.0, "sign": "TI", "types": 6}
+        ],
+        "suffix": [
+          {"expected_conditional": 1.2708800797806035, "expected_fitted": 1.1654711673699014, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 3, "p_conditional": 0.12175379262294798, "p_fitted": 0.10466665980508659, "sign": "JA", "types": 16},
+          {"expected_conditional": 0.9175081027175268, "expected_fitted": 0.8377926421404682, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 2, "p_conditional": 0.23078057320763595, "p_fitted": 0.2011380275534772, "sign": "TI", "types": 14},
+          {"expected_conditional": 0.041666666666666664, "expected_fitted": 0.043478260869565216, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 0, "p_conditional": 1.0, "p_fitted": 1.0, "sign": "A", "types": 1},
+          {"expected_conditional": 0.468898030416355, "expected_fitted": 0.48413210115337774, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 0, "p_conditional": 1.0, "p_fitted": 1.0, "sign": "I", "types": 8},
+          {"expected_conditional": 0.17018823236100722, "expected_fitted": 0.17283780430647072, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 0, "p_conditional": 1.0, "p_fitted": 1.0, "sign": "ME", "types": 3},
+          {"expected_conditional": 1.2519321864871602, "expected_fitted": 1.3428571428571427, "holm_conditional": 1.0, "holm_fitted": 1.0, "observed": 0, "p_conditional": 1.0, "p_fitted": 0.9999999999999992, "sign": "TE", "types": 19}
+        ]
+      }
+    },
+    "tiny_sample": {"conditional_p": 0.5, "fitted_p": 0.0, "forms": ["A-PA-RA", "PA-RA", "KI-NA-TE"], "sign": "A"}
+  },
+  "heading_corrections": {
+    "HT86a_exact_HT95_label_matches": 5,
+    "HT95_unmatched_label": "QE-RA2-U",
+    "HT86a_different_label": "QA-RA2-WA",
+    "A_DU_occurrences": 10,
+    "A_DU_first_row_occurrences": 7,
+    "A_DU_heuristic_heading_row_occurrences": 5,
+    "A_DU_machine_unflagged_occurrences": 7
+  },
+  "hypotheses": {
+    "H1": "Not a preferred translation; closest comparison weakens justification without directly falsifying DA-DU-MA-TA.",
+    "H2": "Responsibility meaning is not independently identified; retain paired forms as research targets."
+  }
+}

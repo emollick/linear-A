@@ -67,8 +67,10 @@ The original mathematical implementations and review files retain their historic
 | | | `phase5_details.json` -> `endings_details.json` |
 | `origin` | `scripts/phase5_anchor.py` | `phase5_anchor_results.json` -> `origin_comparison.json` |
 | `headings` | `scripts/headings.py` | `heading_comparanda.json` (unchanged name) |
-| `affixes` | `scripts/affix_controls.py` | `affix_controls.json` (unchanged name) |
+| `affixes` | `scripts/conditional_affix_controls.py` | `affix_controls.json` (schema 2: conditional default plus fitted-rate sensitivity) |
 | `fractions` | `scripts/fraction_accounting.py` | `fraction_accounting.json` (unchanged name) |
+
+The earlier `scripts/affix_controls.py` command still reproduces the fitted-rate model only. It is not the default `affixes` analysis. Its historical output remains documented in `results/extension_highlights.json`; reviewed values are in `results/review_highlights.json`.
 
 Legacy script commands still work. The [archive](../archive/README.md) retains their detailed run records and historic result hashes. Committed highlights refer to those specific runs, not to every later edit or number of tests.
 

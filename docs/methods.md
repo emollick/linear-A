@@ -52,9 +52,15 @@ The output is a label-by-document matrix and a census, not a reading. Inferred s
 
 ## Attested-remainder controls
 
-For each edge sign and side (initial or final), the control takes every eligible type of three or more signs carrying that sign, and asks whether the remainder after removing the sign is itself an eligible type. The expected count comes from types of the same length carrying any other edge sign; when no such types exist at a length, the overall rate for other signs is used. The observed count is compared with the exact distribution of a sum of independent Bernoulli trials, and the tails are Holm-adjusted across all edge signs on that side. The type set is the same 599-type all-corpus scope as the ending analysis, with a 437-type tablet scope for sensitivity.[3]
+For every initial or final sign, count eligible types of at least three signs whose remainder after removing that edge is also attested. The two-sign minimum for the remainder avoids comparing complete multi-sign types to isolated signs. The scopes contain 599 eligible types and a 437-type tablet subset.[3]
 
-The control tests one premise only: whether a sign's pairs outnumber coincidence. An excess would show that a sign string recurs at the edge of longer words; it would not identify a morpheme, a direction of derivation, or a meaning. Type sets are conditional on the pinned transliteration and on the selected editorial exclusions.
+**Default: fixed-margin conditional model.** At length L, let N be the number of eligible longer types, K the number with attested remainders, and n the number bearing the candidate edge sign. Under exchangeability within this length, X follows Hypergeometric(N, K, n). Convolve these distributions over lengths and compare the observed total with the resulting upper tail. Holm-adjust across all tested edge signs on the same side and in the same scope. The expected count is the sum of nK/N over lengths.
+
+**Retained sensitivity: fitted-rate model.** Estimate each type's probability from the proportion of same-length types carrying other edge signs with attested remainders; use the former fallback when the group is empty. Treat those estimates as fixed in a Bernoulli sum. This exactly calculates a fitted model's tail, but does not account for uncertainty in the fitted rates. Small comparison groups can yield p = 0 without persuasive evidence; the [review](review.md) gives a reproducible counterexample.
+
+The default [conditional implementation](../scripts/conditional_affix_controls.py) emits schema version 2: `controls` holds the conditional results; `fitted_rate_sensitivity` holds the original model. The original [implementation](../scripts/affix_controls.py) remains available for reproducing the earlier output. `research.py affixes` uses the conditional implementation and records both in its input manifest.
+
+Both analyses assume comparability within length strata; neither preserves all lexical, phonotactic, site or scribal dependencies. Correction is within a side and scope, not across every exploratory choice. A nonsignificant result does not prove chance, and even a robust excess would not identify a morpheme or its meaning.
 
 ## Fraction-aware summation search
 
@@ -74,4 +80,4 @@ Software tests check parser behavior, quantity and fraction decoding, explicit e
 
 [2] [Original endings/origin report](../archive/reports/phase5.md) and implementations [scripts/phase5.py](../scripts/phase5.py) and [scripts/phase5_anchor.py](../scripts/phase5_anchor.py). Historical filenames are retained for compatibility; use the topic-based [reproduction commands](reproduction.md).
 
-[3] Implementations [scripts/headings.py](../scripts/headings.py), [scripts/affix_controls.py](../scripts/affix_controls.py), and [scripts/fraction_accounting.py](../scripts/fraction_accounting.py); reference results in the [extension highlights](../results/extension_highlights.json). The distribution and Holm routines are those of the ending analysis.
+[3] Implementations [headings.py](../scripts/headings.py), [conditional_affix_controls.py](../scripts/conditional_affix_controls.py), and [fraction_accounting.py](../scripts/fraction_accounting.py). The original fitted-rate [affix_controls.py](../scripts/affix_controls.py) is retained as sensitivity. See [reviewed highlights](../results/review_highlights.json) and the unchanged [original extension highlights](../results/extension_highlights.json). The distribution and Holm routines are those of the ending analysis.

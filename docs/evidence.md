@@ -8,10 +8,10 @@ The project contains three different kinds of claims: **published interpretation
 
 | Claim | Category | Current assessment | Inspect |
 |---|---|---|---|
-| `DA-DU-MA-TA` means "reassessed allotment" | Project hypothesis H1 | Low confidence; the heading's semantic class is unknown, and HT 86 carries the same labels under two other headings. | [H1](../hypotheses/adjusted-assessment.md) |
-| `DA-DU-MA-TA` and `A-DU` form a reference/revision pair specific to HT 95 | Premise of H1 | **Not supported.** HT 86a partitions the same six labels under `A-KA-RU` and `A-DU` at equal amounts; `A-DU` heads ten records at three sites. | [Headings](#headings-ht-86-and-a-du) |
-| Selected `A-X` forms express responsibility | Project hypothesis H2 | Low confidence; responsibility is not distinguished from possession, origin, or distinct names. | [H2](../hypotheses/administrative-responsibility.md) |
-| The six `A-X / X` pairs outnumber chance | Premise of H2 | Not across the corpus (6 observed, 3.4 expected, p = 0.12). Suggestive within tablets only (6 vs 1.3, p = 0.0010, Holm 0.063 across 60 initial signs). | [Affix controls](#affix-pairs-what-chance-produces) |
+| `DA-DU-MA-TA` means "reassessed allotment" | Project hypothesis H1 | Not preferred; its semantic class is unknown, and HT 86 shares five exact labels under two other headings. | [H1](../hypotheses/adjusted-assessment.md) |
+| HT 95's headings independently identify reference versus revision | Premise of H1 | **Not established.** HT 86a partitions five exact shared labels plus a different sixth label. It supplies an alternative, not a direct test of `DA-DU-MA-TA`, which is absent there. | [Headings](#headings-ht-86-and-a-du) |
+| Selected `A-X` forms express responsibility | Project hypothesis H2 | Not preferred; responsibility is not distinguished from possession, origin, another grammatical relation, or distinct names. | [H2](../hypotheses/administrative-responsibility.md) |
+| The six `A-X / X` pairs outnumber chance | Premise of H2 | Model-dependent: conditional p = 0.154 across the corpus; tablet-only p = 0.00765, Holm = 0.459. Non-rejection does not establish coincidence. | [Affix controls](#affix-pairs-reference-model-sensitivity) |
 | `KU-RO` marks totals | Prior scholarly interpretation, used as a positive control | The computational search recovers the known behavior, with unmatched cases retained; with the source's fraction values HT 104 joins the matches. | [Accounting highlights](../results/highlights.json), [fraction highlights](../results/extension_highlights.json) |
 | Damage warnings can disappear in transliteration | Corpus audit result | 412 candidate lexical occurrences contain an original-sign loss marker absent from the corresponding transliteration. | [Corpus audit](../archive/reports/phase4.md) |
 | JA, TI, or TE has a special word-final distribution | Model-dependent calculation | Results change with spelling controls; they establish no grammatical meaning. | [Ending highlights](../results/phase5_highlights.json) |
@@ -42,13 +42,13 @@ The integer-only rule keeps every row with a fraction sign out of the search. Re
 | With exact fractions, HT 127 excluded | 751 | 148 | 7 | 18 | 0.0002 |
 | With exact fractions, literal corpus | 758 | 148 | 8 | 19 | 0.0002 |
 
-The one object gained is HT 104, where `45+1/2`, `20+1/2`, and `29` sum to the written `KU-RO 95` under either published segmentation of its entries. No integer match is lost. Two newly eligible positions fail by the amounts Younger's commentary already records: HT 9a is written `31+3/4` against entries summing to 31, and HT 13 is written `130+1/2` against entries that total 131 once the damaged `5+1/2` is included. Both are discrepancies on the tablets, not in the method, and the program does not repair them.[4]
+The one object gained is HT 104, where `45+1/2`, `20+1/2`, and `29` sum to the written `KU-RO 95` under either published segmentation of its entries. No integer match is lost. For HT 9a, the listed entries total 31 against the written `31+3/4`. For HT 13, the strict machine run retains only a partial block totaling `125+1/2`; adding the damaged `5+1/2` in the published reading gives 131, against the written `130+1/2`. The partial-block shortfall is not the same as the published full-reading discrepancy. These are conditional comparisons of transcribed amounts, not new readings of the objects; the program does not repair them.[4]
 
 HT 85a is a separate case. Its seven entries (12, 12, 6, 24, 5, 3, 4) sum exactly to the written `KU-RO 66`, but the source marks damage beside both the label and the numeral, so the strict rule excludes the row. The fraction analysis lists such exact sums hidden by damage without counting them.[4]
 
 ## Headings: HT 86 and A-DU
 
-The heading comparison collects the six entry labels of HT 95 and finds them on four records only: HT 95a, HT 95b, HT 86a, and HT 86b. Younger's HT 95 commentary already cross-references HT 86. On HT 86a the labels are split under two headings on one face: `A-KA-RU` over KU-NI-SU (with `GRA+K+L`), SA-RU, DI-DE-RU, and QA-RA2-WA, then a ruled line, then `A-DU` over DA-ME (with `GRA+B`) and MI-NU-TE, at 20 each except one 10.[5]
+The heading comparison collects six entry labels from HT 95. Four records contain at least two of those labels: HT 95a, HT 95b, HT 86a, and HT 86b. Individual labels also occur elsewhere. HT 86a shares five exact labels, not all six. Younger's HT 95 commentary already cross-references HT 86. On HT 86a the five shared labels and a different sixth label are split under two headings on one face: `A-KA-RU` over KU-NI-SU (with `GRA+K+L`), SA-RU, DI-DE-RU, and QA-RA2-WA, then a ruled line, then `A-DU` over DA-ME (with `GRA+B`) and MI-NU-TE, at 20 each except one 10.[5]
 
 | Label | HT 95b (`A-DU`) | HT 95a (`DA-DU-MA-TA GRA`) | HT 86a (heading) |
 |---|---:|---:|---|
@@ -59,22 +59,20 @@ The heading comparison collects the six entry labels of HT 95 and finds them on 
 | DI-DE-RU | 10 | 10 | 20 (`A-KA-RU`) |
 | QE-RA2-U | 10 | 7 | absent; `QA-RA2-WA 10` under `A-KA-RU` |
 
-`A-DU` occurs on ten records at Haghia Triada, Khania, and Tylissos, seven times as the first row, before grain, people, oil, and cyperus. It is a general heading term. This is a descriptive comparison of exact labels in the pinned corpus; it assigns no meaning to any heading and does not order the tablets in time.[5]
+`A-DU` has ten occurrences across three sites: seven in a first parsed row, five in a row classified as a heading by the quantity-free-row heuristic, and seven without a machine flag. These overlapping counts are not interchangeable. Recurrence in heading contexts does not establish a common noun, transaction term, or name. Different grain-related signs establish different notation, not a proven contrast between commodity and accounting state.[5]
 
-## Affix pairs: what chance produces
+## Affix pairs: reference-model sensitivity
 
-Removing one sign from a word often leaves another attested word by coincidence. The attested-remainder control compares each edge sign with words of the same length carrying any other edge sign, using an exact tail and Holm adjustment across all edge signs in a scope.[6]
+The default `affixes` command now uses a length-stratified fixed-margin conditional test. For every length it holds fixed the number of longer types, attested remainders, and types bearing the candidate edge sign. It then tests their association under within-length exchangeability. The former calculation estimates rates from other edge signs and treats those estimates as fixed; it is preserved as fitted-rate sensitivity, not silently replaced.[6]
 
-| Scope | Edge | Types | Remainder attested | Expected | Exact tail | Holm |
-|---|---|---:|---:|---:|---:|---:|
-| All types (599) | initial `A` | 66 | 6 | 3.42 | 0.12 | 1.00 |
-| All types (599) | initial `I` | 25 | 4 | 1.39 | 0.045 | 1.00 |
-| All types (599) | final `JA` | 22 | 5 | 1.82 | 0.028 | 1.00 |
-| All types (599) | final `TI` | 23 | 3 | 1.26 | 0.12 | 1.00 |
-| Tablet types (437) | initial `A` | 41 | 6 | 1.27 | 0.0010 | 0.063 |
-| Tablet types (437) | final `JA` | 16 | 3 | 1.17 | 0.10 | 1.00 |
+| Scope | Initial-A pairs | Conditional expected | Conditional p | Conditional Holm | Fitted-rate p | Fitted-rate Holm |
+|---|---:|---:|---:|---:|---:|---:|
+| All 599 eligible types | 6 | 3.75 | 0.15367 | 1.00000 | 0.12162 | 1.00000 |
+| 437 tablet types | 6 | 2.00 | 0.00765 | 0.45881 | 0.00105 | 0.06271 |
 
-No edge sign falls below 0.05 after Holm adjustment in any scope. The five JA pairs and six A pairs are real exact-string relations, but their number does not by itself show a recurring element; the tablet-only excess for `A` is the one result worth a further, independently designed test.[6]
+Holm adjustment covers 66 initial signs in the all-type scope and 60 in the tablet scope. No edge sign is below 0.05 after correction in either conditional scope. These are model-dependent tests, not probabilities that a meaning is true or that all six pairs are accidental. Neither model independently identifies responsibility, possession, origin, or grammatical status.
+
+The [review](review.md) documents a two-word comparison where the fitted-rate calculation returns p = 0 because its comparison sample has no successes, while the fixed-margin test returns p = 0.5. The conditional model avoids this fitted-zero issue but still does not preserve every linguistic, lexical, site, or scribal dependency. Current values are in [review highlights](../results/review_highlights.json); [extension highlights](../results/extension_highlights.json) retain the original fitted-rate reference run.
 
 ## Endings: sensitivity rather than confirmed morphology
 
@@ -118,4 +116,4 @@ The ritual readings involving a dedicant giving an offering, the probable Sybrit
 
 [5] [Heading comparison](methods.md#heading-comparison), targets in [heading_comparanda.json](../data/heading_comparanda.json), implementation [scripts/headings.py](../scripts/headings.py).
 
-[6] [Attested-remainder controls](methods.md#attested-remainder-controls), implementation [scripts/affix_controls.py](../scripts/affix_controls.py).
+[6] [Attested-remainder controls](methods.md#attested-remainder-controls), current implementation [conditional_affix_controls.py](../scripts/conditional_affix_controls.py), with the unchanged fitted-rate calculation in [affix_controls.py](../scripts/affix_controls.py).

@@ -6,8 +6,8 @@ These pages propose meanings rather than certify translations. **Both hypotheses
 
 | ID | Proposed meaning | Inscription(s) | Main unresolved question |
 |---|---|---|---|
-| [H1](adjusted-assessment.md) | `DA-DU-MA-TA`: "reassessed allotment" | HT 95a/b | Does the heading encode an accounting state, or name an entity or section? HT 86 carries the same labels under two other headings. |
-| [H2](administrative-responsibility.md) | Selected `A-X` forms: "on X's account / under X's responsibility" | HT 96, HT 115, ZA 10 | Are the pairs forms of the same entity? Their number is within chance across the corpus. |
+| [H1](adjusted-assessment.md) | `DA-DU-MA-TA`: "reassessed allotment" | HT 95a/b | Does the heading encode an accounting state or name an entity? Five exact labels overlap with HT 86; reassessment is not preferred. |
+| [H2](administrative-responsibility.md) | Selected `A-X` forms: "on X's account / under X's responsibility" | HT 96, HT 115, ZA 10 | Are the pairs forms of the same entity? The count is model-dependent and does not identify responsibility. |
 
 H2 has two English applications, not two independent discoveries: "under Parane's responsibility" and "Tanate: two ... on Tanate's account: one."
 
@@ -15,6 +15,6 @@ H2 has two English applications, not two independent discoveries: "under Parane'
 
 Start with the actual sign sequence and its reading qualifications. Then distinguish what the account shows from what the proposed English adds. Each page supplies alternatives and a test that would help discriminate between them. A plausible account of an example used to construct the hypothesis is not an independent prediction.
 
-Two later checks bear on the premises rather than the meanings: the [heading comparison](../docs/evidence.md#headings-ht-86-and-a-du) asks whether HT 95's contrast is specific to that tablet, and the [attested-remainder control](../docs/evidence.md#affix-pairs-what-chance-produces) asks whether the `A-X / X` pairs outnumber coincidence. Both weaken the case as first presented.
+Two later checks bear on the premises rather than the meanings: the [heading comparison](../docs/evidence.md#headings-ht-86-and-a-du) asks whether HT 95's contrast is specific to that tablet, and the [attested-remainder control](../docs/evidence.md#affix-pairs-reference-model-sensitivity) asks whether the `A-X / X` pairs outnumber coincidence. The [review](../docs/review.md) explains why neither English meaning is currently preferred and distinguishes weakening from falsification.
 
 The arithmetic and ending analyses do **not** choose these meanings. They supply constraints and identify false positives. Existing interpretations such as `KU-RO` as a total marker, or the museum's probable Sybrita identification, are [prior evidence](../docs/evidence.md), not original translations in this section.

@@ -38,7 +38,7 @@ ANALYSES = {
     'headings': ('headings.py', {
         'heading_comparanda.json': 'heading_comparanda.json',
     }),
-    'affixes': ('affix_controls.py', {
+    'affixes': ('conditional_affix_controls.py', {
         'affix_controls.json': 'affix_controls.json',
     }),
     'fractions': ('fraction_accounting.py', {
@@ -49,7 +49,8 @@ PERMUTATION_TOPICS = {'accounting', 'fractions'}
 INPUTS = [
     'research.py', 'scripts/phase4.py', 'scripts/phase5.py',
     'scripts/phase5_anchor.py', 'scripts/headings.py', 'scripts/affix_controls.py',
-    'scripts/fraction_accounting.py', 'data/editorial_reviews.json',
+    'scripts/fraction_accounting.py', 'scripts/conditional_affix_controls.py',
+    'data/editorial_reviews.json',
     'data/phase5_reviews.json', 'data/phase5_semantic_anchors.json',
     'data/heading_comparanda.json',
 ]

@@ -6,6 +6,8 @@
 
 [Accounting and corpus highlights](highlights.json) contain the 4,999-permutation reference results, the selected corpus counts, and their recorded provenance. [Ending and origin highlights](phase5_highlights.json) contain candidate pairs, adjusted and unadjusted statistics, and origin-comparison results. [Extension highlights](extension_highlights.json) contain the HT 95 / HT 86 label matrix and heading census, the attested-remainder controls, and the fraction-aware summation results. Their historical field names and test counts are retained; they refer to their recorded runs, not every later repository state.
 
+For the reviewed conditional affix results and corrected heading counts, use [review_highlights.json](review_highlights.json). `extension_highlights.json` is retained unchanged as the original fitted-rate reference; it is not the current default affix output. [Review notes](../docs/review.md) explain the difference.
+
 These are computational results and candidate lists, **not validated translations**. The [hypothesis pages](../hypotheses/README.md) are the place to evaluate proposed meanings.
 
 ## Generated outputs
@@ -22,7 +24,7 @@ These are computational results and candidate lists, **not validated translation
 | `endings_details.json` | Complete final-sign tests, TI contexts, paired forms, and eligible type lists |
 | `origin_comparison.json` | Exact-tail and simple-JA predictions for the published origin hypothesis |
 | `heading_comparanda.json` | Anchor entry labels, the documents sharing them, inferred section headings, and the heading-word census |
-| `affix_controls.json` | Observed and expected attested remainders for every initial and final sign, with exact tails and Holm adjustment |
+| `affix_controls.json` | Schema 2: fixed-margin conditional controls, former fitted-rate sensitivity, strata, observed pairs and adjusted tails |
 | `fraction_accounting.json` | Fraction-aware blocks, matches, permutation diagnostics, unmatched positions, and exact sums hidden by damage |
 | `run_manifest.json` | Command, source checksums, parameters, and hashes of inputs and generated outputs |
 
