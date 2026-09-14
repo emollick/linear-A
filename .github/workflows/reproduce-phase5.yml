@@ -1,0 +1,58 @@
+name: Reproduce phase 5
+on:
+  push:
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - 'data/*reviews.json'
+      - 'data/phase5_semantic_anchors.json'
+      - '.github/workflows/reproduce-phase5.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13.5'
+      - name: Acquire verified source with existing phase-four loader
+        run: |
+          mkdir -p results
+          python scripts/phase4.py --fetch --permutations 0 > results/acquisition_console.txt
+      - name: Reproduce phase-five tests
+        run: |
+          python scripts/phase5.py > results/phase5_console.txt
+          python scripts/phase5_anchor.py > results/phase5_anchor_console.txt
+      - name: Run all regression tests
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m unittest discover -s tests -v 2>&1 | tee results/phase5_tests.txt
+      - name: Record input and output integrity
+        env:
+          RESEARCH_COMMIT: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, pathlib, platform
+          root = pathlib.Path('.')
+          paths = sorted((root/'scripts').glob('phase*.py'))
+          paths += sorted((root/'tests').glob('test_phase*.py'))
+          paths += sorted((root/'data').glob('*reviews.json'))
+          paths += [root/'data/phase5_semantic_anchors.json']
+          paths += sorted((root/'results').glob('phase5_*.json'))
+          manifest = {'research_commit': os.environ['RESEARCH_COMMIT'], 'python': platform.python_version(), 'sha256': {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}}
+          (root/'results/phase5_build_manifest.json').write_text(json.dumps(manifest, indent=2)+'\n')
+          print(json.dumps(manifest, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phase5-reproduced-results
+          path: |
+            results/phase5_*.json
+            results/phase5_tests.txt
+          if-no-files-found: error
+          retention-days: 30

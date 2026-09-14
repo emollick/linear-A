@@ -1,0 +1,30 @@
+{
+  "upstream_commit": "43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a",
+  "status": "A published semantic hypothesis used to generate tests, not a validated translation or an independent holdout.",
+  "anchors": [
+    {
+      "id": "sybrita_candidate",
+      "base": "SU-KI-RI-TA",
+      "base_record": "PHWa32",
+      "extended": "SU-KI-RI-TE-I-JA",
+      "extended_record": "HTZb158b",
+      "attested_alternation": {"old_tail": ["TA"], "new_tail": ["TE", "I", "JA"]},
+      "published_interpretation": "The Heraklion Archaeological Museum describes the jar inscription as probably indicating origin at Sybrita/Syvrita.",
+      "archaeological_observation": "The museum states that both inscriptions on pithos Pi3915 were incised before firing.",
+      "cautions": [
+        "The museum's geographical interpretation is probable, not an established word-by-word translation.",
+        "The observed relation is not simple addition of JA to SU-KI-RI-TA.",
+        "No sound law, grammatical case, or meaning for JA is inferred here.",
+        "Possible maker, affiliation, ownership, container-origin and contents-origin interpretations remain distinct.",
+        "The digital source and commentary are derivative editions, not independent epigraphic witnesses. Photographs were not inspected in this phase.",
+        "Alternative personal-name readings have been proposed; this workflow does not adjudicate language-family claims."
+      ],
+      "sources": [
+        {"type": "museum", "url": "https://www.heraklionmuseum.gr/en/exhibit/large-pithos-with-incised-linear-a-inscription/", "accessed": "2026-09-14"},
+        {"type": "museum_catalogue", "url": "https://ca.heraklionmuseum.gr/ca/pawtucket/index.php/Detail/objects/744", "catalogue": "Pi3915", "accessed": "2026-09-14"},
+        {"type": "transcription", "path": "commentary/PHWa32.html", "git_blob": "c67c1898f107313478265db9ea44b04620e09d29"},
+        {"type": "transcription", "path": "commentary/HTZb158.html", "git_blob": "5774fe9d086aea1241c96c6264610ffbcc08cf5c"}
+      ]
+    }
+  ]
+}
