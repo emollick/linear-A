@@ -1,38 +1,62 @@
-# Linear A: reproducible exploratory research
+# Linear A: translation hypotheses and evidence
 
-A staged investigation of Linear A sign patterns, accounting contexts, and possible morphology. This is not a decipherment and does not assign unverified translations.
+Can the structure of Linear A accounts help identify the meanings of otherwise unread expressions? This repository investigates that question through proposed translations, source-linked inscription comparisons, and reproducible computational tests.
 
-## Start here
+**There are two original translation hypotheses here, not a completed decipherment.** Both are low-confidence proposals. Neither has passed an independent semantic test, and priority over the full scholarly literature has not been established. Published interpretations, calculations, and conjectures are kept separate.
 
-Read the [phase 5 report](reports/phase5.md), inspect its [compact results](results/phase5_highlights.json), and review the [new editorial decisions](data/phase5_reviews.json) and [published semantic hypothesis](data/phase5_semantic_anchors.json).
+## The translation proposals
 
-Phase 5 compares candidate endings under three different sign-order and vowel-conditioned reference models. It separates a possible origin/affiliation interpretation from a generic JA-suffix claim, checks TI against independent accounting uses, and removes a mixed-script false positive. The eligible set has 599 multi-sign types, not 599 securely complete words. Neither JA nor TI survives a 0.05 Holm threshold in either vowel-controlled all-corpus analysis; no grammatical meaning is established.
+| Hypothesis | Proposed reading | Evidence to examine | Status |
+|---|---|---|---|
+| [H1: adjusted assessment](hypotheses/adjusted-assessment.md) | `DA-DU-MA-TA`: **"reassessed allotment"** | HT 95 records the same six labels on both faces, with a uniform schedule on one and two changed amounts on the other. | Conjecture; one occurrence of the proposed term. |
+| [H2: administrative responsibility](hypotheses/administrative-responsibility.md) | `A-PA-RA-NE`: **"under Parane's responsibility"** | Compare `PA-RA-NE` in entries with `A-PA-RA-NE` in headings, and `TA-NA-TE / A-TA-NA-TE` within one tablet. | Conjecture; the proposed relationship is not independently identified. |
 
-The [phase 4 report](reports/phase4.md), [phase 4 results](results/highlights.json), and [earlier editorial decisions](data/editorial_reviews.json) remain available. Phase 4 processes 1,721 unique digital record IDs, preserves loss markers missing from the transliteration, and recovers KU-RO summation behavior as a known positive control, not a new translation.
+Each hypothesis page presents the English reading, the exact claim being added, its source evidence, competing explanations, and observations that could support or undermine it. The proposed meanings are not outputs of the statistical tests.
 
-## Reproduce
+## What the project actually establishes
 
-Python 3.13.5 was used for the archived results. All analyses use only the standard library.
+The computational work is most useful for testing how much evidence survives alternative readings and models. It recovers the **already-known** association of `KU-RO` with totals as a positive control, quantifies missing damage information in one digital corpus, and tests whether apparent word endings remain unusual under different reference models. It has not established a new grammatical meaning.
+
+The distinction matters: **reproducing a calculation does not validate a translation.** Familiar proposals such as "from Sybrita" and ritual interpretations of giving an offering come from prior scholarship, not discoveries made by this project. See the [evidence and claim register](docs/evidence.md).
+
+## Read by question
+
+| What do you want to know? | Start here |
+|---|---|
+| What are the proposed translations, and why? | [Translation hypotheses](hypotheses/README.md) |
+| Which claims are observations, results, or speculation? | [Evidence and claim register](docs/evidence.md) |
+| How were the corpus and statistical tests handled? | [Methods and limitations](docs/methods.md) |
+| What do inscription codes and sign labels mean? | [Reading guide and sources](docs/sources.md) |
+| How do I rerun the analyses or inspect their outputs? | [Reproduction guide](docs/reproduction.md) |
+| Where are the detailed original reports? | [Research archive](archive/README.md) |
+
+## Run the analyses
+
+Use Python 3.10 or newer; the archived reference runs used Python 3.13.5. Only the Python standard library is required.
 
 ```sh
-# Acquire and verify the source; zero permutations is acquisition-only here.
-python scripts/phase4.py --fetch --permutations 0
-python scripts/phase5.py
-python scripts/phase5_anchor.py
+# Run from the repository root. --fetch downloads the pinned source if missing.
+python research.py all --fetch
 python -m unittest discover -s tests -v
-
-# To reproduce the archived phase-four permutation analysis separately:
-python scripts/phase4.py --permutations 4999 --seed 20260914
 ```
 
-An existing source file can be supplied with `--source PATH`. Both SHA-256 and Git blob checks reject changed inputs. No downloaded JavaScript is evaluated. The corpus's speculative `translatedWords` field is not used.
+Individual commands are `accounting`, `endings`, and `origin`. The source is checksum-verified before analysis; downloaded JavaScript is parsed as data, not executed. Results are written to `results/generated/` with descriptive filenames and a run manifest. The [reproduction guide](docs/reproduction.md) explains options, exclusions, and the relationship to archived results.
 
-All 64 tests passed locally and in [phase 5 GitHub Actions run 34873792613](https://github.com/emollick/linear-A/actions/runs/34873792613), at research commit `9133aabe53c497c9955cf3ac4393261812d31be0`. Nine code/review inputs and all three generated phase-five result files matched byte-for-byte. The artifact contains the complete results, test log, and integrity manifest. Artifacts expire after 30 days; code, pinned acquisition commands, reports, and compact results remain in the repository. The [earlier phase 4 run](https://github.com/emollick/linear-A/actions/runs/34869921158) independently reproduced that phase's 33 tests and four output files.
+## Repository map
 
-## Interpretation and provenance
+```text
+hypotheses/   Proposed meanings, evidence, alternatives, and falsification tests
+docs/         Evidence register, methods, reading guide, and reproduction
+data/         Source-linked reading decisions and a published origin hypothesis
+results/      Reference highlights and an output guide
+research.py   Topic-based command-line entry point
+scripts/      Existing analytical implementations, retained for compatibility
+tests/        Computational regression and repository-navigation checks
+archive/      Historical reports; not required to understand the current claims
+```
 
-The source is `mwenge/lineara.xyz` at commit `43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a`. It derives from published editions and does not replace original photographs, drawings, or critical apparatus. Source references and hashes appear in the reports, scripts, and review files. The source corpus and copyrighted scholarly commentaries are not relicensed by this repository.
+## Provenance and attribution
 
-Absence of a machine-readable damage flag is not proof of completeness or certainty. Distinct faces are not independent objects. An exact string extension is not automatically an affix. Numerical equality does not establish common units. Retrospective statistical diagnostics are not probabilities that translations are correct. Vowel-conditioned models assume conventional sound classes without independently validating Linear A phonology. Published interpretations are distinguished from our calculations and from new hypotheses.
+The input is the [Linear A Explorer corpus](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/LinearAInscriptions.js), fixed to one version. It derives from published editions; it is not an independent reading of the ancient objects or a guarantee of complete corpus coverage. References and reading qualifications accompany individual claims.
 
-Prepared with ChatGPT at Ethan Mollick's request on 14 September 2026. No external researchers have reviewed these results.
+This is AI-assisted exploratory research developed with ChatGPT at Ethan Mollick's request. No external scholarly review or first-in-literature claim is asserted. Source datasets and scholarly texts retain their original rights; this repository does not relicense them.

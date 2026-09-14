@@ -6,3 +6,6 @@ results/phase4_*.json
 results/console.txt
 results/tests.txt
 results/build_manifest.json
+results/generated/
+results/check/
+cache/

@@ -1,0 +1,41 @@
+name: Reproduce analyses and check documentation
+on:
+  push:
+    paths:
+      - 'README.md'
+      - 'research.py'
+      - 'docs/**'
+      - 'hypotheses/**'
+      - 'archive/**'
+      - 'reports/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'data/**'
+      - 'results/*.json'
+      - 'results/README.md'
+      - '.github/workflows/reproduce.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13.5'
+      - name: Reproduce accounting, endings, and origin analyses
+        run: python research.py all --fetch
+      - name: Check computational regressions and repository navigation
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m unittest discover -s tests -v 2>&1 | tee results/generated/tests.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linear-a-reproduced-analyses
+          path: results/generated/
+          if-no-files-found: error
+          retention-days: 30
