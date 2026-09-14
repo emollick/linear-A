@@ -1,0 +1,114 @@
+{
+  "status": "Exploratory candidate prioritization, not a decipherment or confirmed affixes.",
+  "research_commit": "9133aabe53c497c9955cf3ac4393261812d31be0",
+  "source_commit": "43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a",
+  "eligible_types": 599,
+  "tested_signs": 108,
+  "JA_pairs": [
+    [
+      "*306-TU",
+      "*306-TU-JA"
+    ],
+    [
+      "A-MA",
+      "A-MA-JA"
+    ],
+    [
+      "A-SE",
+      "A-SE-JA"
+    ],
+    [
+      "KU-PA",
+      "KU-PA-JA"
+    ],
+    [
+      "PA-SE",
+      "PA-SE-JA"
+    ]
+  ],
+  "TI_pairs": [
+    [
+      "DA-KU-SE-NE",
+      "DA-KU-SE-NE-TI"
+    ],
+    [
+      "JA-KU",
+      "JA-KU-TI"
+    ],
+    [
+      "RI-RU-MA",
+      "RI-RU-MA-TI"
+    ]
+  ],
+  "all_corpus_M2": [
+    {
+      "sign": "JA",
+      "observed_final_types": 29,
+      "m2_expected": 19.862750515181492,
+      "m2_p": 0.0005819365232518758,
+      "holm_m2_p": 0.06284914451120258
+    },
+    {
+      "sign": "TE",
+      "observed_final_types": 32,
+      "m2_expected": 27.280328680328683,
+      "m2_p": 0.05583722899090574,
+      "holm_m2_p": 1.0
+    },
+    {
+      "sign": "TI",
+      "observed_final_types": 30,
+      "m2_expected": 20.946120616921466,
+      "m2_p": 0.001179780195136202,
+      "holm_m2_p": 0.12623648087957362
+    }
+  ],
+  "tablet_M2": {
+    "tablets": {
+      "JA": {
+        "final_types": 19,
+        "unadjusted_p": 0.0011045592027608287,
+        "holm_p": 0.1115604794788437
+      },
+      "TI": {
+        "final_types": 20,
+        "unadjusted_p": 0.027633390993015657,
+        "holm_p": 1.0
+      }
+    },
+    "tablets_without_HT104": {
+      "JA": {
+        "final_types": 19,
+        "unadjusted_p": 0.0011550956301656199,
+        "holm_p": 0.1166646586467276
+      },
+      "TI": {
+        "final_types": 17,
+        "unadjusted_p": 0.11350812521296348,
+        "holm_p": 1.0
+      }
+    }
+  },
+  "origin_candidate": {
+    "base": "SU-KI-RI-TA",
+    "extended": "SU-KI-RI-TE-I-JA",
+    "exact_TA_to_TE_I_JA_pairs": 1,
+    "simple_JA_prediction_found": false,
+    "semantic_status": "Published museum interpretation: probably origin at Sybrita/Syvrita; not validation of a generic JA suffix."
+  },
+  "reproduction": {
+    "local_tests_passed": 64,
+    "github_tests_passed": 64,
+    "github_run": 34873792613,
+    "matching_input_hashes": 9,
+    "matching_output_hashes": 3
+  },
+  "limits": [
+    "Exploratory and retrospective; not a held-out or preregistered discovery.",
+    "Vowel-conditioned models assume conventional sound classes, not a deciphered phonology.",
+    "Word types and consonant distributions are not independent random observations.",
+    "Each Holm correction covers all tested signs in one model/scope, not all model choices.",
+    "Source segmentation and partial apparatus remain potential errors.",
+    "A preferred word ending does not establish a morpheme or its meaning."
+  ]
+}
