@@ -1,6 +1,6 @@
 {
   "status": "Descriptive comparanda, chance controls, and a fraction-aware positive control; not validation of any translation.",
-  "research_commit": "TO_BE_RECORDED",
+  "research_commit": "e469520accc07ee78143e094c270f55b1291de4c",
   "source_commit": "43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a",
   "headings": {
     "anchor_entry_labels": [
