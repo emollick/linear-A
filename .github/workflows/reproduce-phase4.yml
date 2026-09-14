@@ -1,0 +1,53 @@
+name: Reproduce phase 4
+on:
+  push:
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - 'data/editorial_reviews.json'
+      - '.github/workflows/reproduce-phase4.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13.5'
+      - name: Fetch pinned corpus and reproduce all three analyses
+        run: |
+          mkdir -p results
+          python scripts/phase4.py --fetch --permutations 4999 --seed 20260914 > results/console.txt
+      - name: Run regression tests
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m unittest discover -s tests -v 2>&1 | tee results/tests.txt
+      - name: Record input and output integrity
+        env:
+          RESEARCH_COMMIT: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, pathlib, platform
+          root = pathlib.Path('.')
+          paths = [root/'scripts/phase4.py', root/'tests/test_phase4.py', root/'data/editorial_reviews.json']
+          paths += sorted((root/'results').glob('phase4_*.json'))
+          manifest = {
+              'research_commit': os.environ['RESEARCH_COMMIT'],
+              'python': platform.python_version(),
+              'sha256': {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
+          }
+          (root/'results/build_manifest.json').write_text(json.dumps(manifest, indent=2)+'\n')
+          summary = json.loads((root/'results/phase4_summary.json').read_text())
+          print(json.dumps({'records': summary['unique_record_ids'], 'raw_hidden_loss': summary['morphology']['lexical_tokens_with_loss_hidden_in_romanization'], 'arithmetic': {k:v['ranking'] for k,v in summary['arithmetic'].items()}}, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phase4-reproduced-results
+          path: results/
+          if-no-files-found: error
+          retention-days: 30
