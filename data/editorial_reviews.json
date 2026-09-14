@@ -1,0 +1,18 @@
+{
+  "upstream_commit": "43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a",
+  "scope": "Selected source checks, not a complete epigraphic apparatus. No images were re-edited or independently read.",
+  "exclude_as_independent_words": [
+    {"document": "IOZa16", "token_index": 2, "form": "JA-SA-SA-RA", "reason": "Continues with ME on the following face; not a complete short word.", "source_path": "commentary/IOZa16.html", "source_blob": "6c86993c8a6d67a46130cfb95834c8512c8b6954"},
+    {"document": "IOZa12", "token_index": 2, "form": "JA-SA", "reason": "First face of JA-SA-SA-RA-ME, continuing on the next face.", "source_path": "commentary/IOZa12.html", "source_blob": "5d908c9f4f3aa117fdc593880736fb886e78f8cb"},
+    {"document": "IOZa12", "token_index": 4, "form": "SA-RA-ME", "reason": "Second face of JA-SA-SA-RA-ME, not an independent word.", "source_path": "commentary/IOZa12.html", "source_blob": "5d908c9f4f3aa117fdc593880736fb886e78f8cb"},
+    {"document": "HT24a", "token_index": 5, "form": "MA-RU-ME", "reason": "Published as commodity notation MA+RU ME (*561), not an established syllabic word.", "source_path": "commentary/HT24.html", "source_blob": "a947098b15d36bbb2c7e5647207caea89330329a"},
+    {"document": "HT24a", "token_index": 11, "form": "MA-RU-ME", "reason": "Published as commodity notation MA+RU ME (*561), with ME underlined.", "source_path": "commentary/HT24.html", "source_blob": "a947098b15d36bbb2c7e5647207caea89330329a"},
+    {"document": "HT24a", "token_index": 16, "form": "MA-RU-ME", "reason": "Damaged occurrence of the same commodity notation; already raw-flagged.", "source_path": "commentary/HT24.html", "source_blob": "a947098b15d36bbb2c7e5647207caea89330329a"}
+  ],
+  "cautions": [
+    {"document": "HTWc3024", "form": "A-RA-TU-ME", "status": "Candidate retained with reading uncertainty, not a secure suffix.", "reason": "Final ME is underlined in Younger's commentary. The metadata value 6 denotes seal impressions. Corpus *22F and commentary OVISf are discrepant, so animal semantics are quarantined.", "source_path": "commentary/HTWc3024.html", "source_blob": "2ec18df7eeecd38b761f520c298757fc103caa97"},
+    {"document": "HT104", "status": "Two competing segmentations retained.", "reason": "Younger explicitly allows DA-KU-SE-NE TI, I-DU TI, and PA-DA-SU TI, with TI an ideogram, as alternatives to the joined forms. KU in the first and all signs in the third expression are underlined. Summation does not decide between analyses.", "source_path": "commentary/HT104.html", "source_blob": "d915dc27b1c61dc3459e67b063fdc0e15c3c27be"},
+    {"document": "KH20", "form": "A-SI-KI-RA", "status": "Word comparison retained; quantity/heading interpretation unresolved.", "reason": "A-SI-KI-RA precedes *303+E and a break. The later fraction is not a securely attached quantity. The upper part of the tablet is lost.", "source_path": "commentary/KH20.html", "source_blob": "231de509c073b2ff8993d6d591f9e4ec6170ecdc"},
+    {"document": "HT127b", "status": "Excluded as a whole object in a separately reported arithmetic sensitivity check.", "reason": "The equality 156+72+24+15+11+14=292 requires an erased entry 14. Several readings are underlined. The raw corpus omits this apparatus. KI+MU also differs from the commentary's KI+ME; no silent correction is made.", "source_path": "commentary/HT127.html", "source_blob": "3466108e971b50fb522236bc0663eeddcfdf5559"}
+  ]
+}
