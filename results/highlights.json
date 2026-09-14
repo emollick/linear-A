@@ -1,0 +1,76 @@
+{
+  "arithmetic": {
+    "narrow": {
+      "KU_RO_eligible_sum_positions": 7,
+      "KU_RO_result": {
+        "form": "KU-RO",
+        "match_windows": 3,
+        "matching_objects": 3,
+        "max_statistic_adjusted_p": 0.0108,
+        "new_to_phase1_objects": [],
+        "object_ids": ["HT117", "HT88", "HT94"],
+        "permutation_p": 0.0108
+      },
+      "blocks_of_at_least_three": 36,
+      "eligible_integer_rows": 373,
+      "null_max_score_histogram": {"0": 5, "1": 4392, "2": 549, "3": 51, "4": 2},
+      "permutations": 4999,
+      "seed": 20260914,
+      "tested_forms": 79
+    },
+    "numeric": {
+      "KU_RO_eligible_sum_positions": 15,
+      "KU_RO_result": {
+        "form": "KU-RO",
+        "match_windows": 7,
+        "matching_objects": 7,
+        "max_statistic_adjusted_p": 0.0002,
+        "new_to_phase1_objects": ["HT11", "HT127"],
+        "object_ids": ["HT11", "HT117", "HT127", "HT88", "HT89", "HT9", "HT94"],
+        "permutation_p": 0.0002
+      },
+      "blocks_of_at_least_three": 70,
+      "eligible_integer_rows": 606,
+      "null_max_score_histogram": {"0": 1, "1": 3217, "2": 1233, "3": 462, "4": 77, "5": 8, "6": 1},
+      "permutations": 4999,
+      "seed": 20260914,
+      "tested_forms": 117
+    },
+    "numeric_excluding_HT127": {
+      "KU_RO_eligible_sum_positions": 14,
+      "KU_RO_result": {
+        "form": "KU-RO",
+        "match_windows": 6,
+        "matching_objects": 6,
+        "max_statistic_adjusted_p": 0.0002,
+        "new_to_phase1_objects": ["HT11"],
+        "object_ids": ["HT11", "HT117", "HT88", "HT89", "HT9", "HT94"],
+        "permutation_p": 0.0002
+      },
+      "blocks_of_at_least_three": 69,
+      "eligible_integer_rows": 599,
+      "null_max_score_histogram": {"1": 3526, "2": 1115, "3": 296, "4": 56, "5": 6},
+      "permutations": 4999,
+      "seed": 20260914,
+      "tested_forms": 117
+    }
+  },
+  "byte_identical_input_and_output_files": 7,
+  "ci_run": 34869921158,
+  "initial_A_candidate_pairs": 6,
+  "local_and_ci_tests": 33,
+  "me_pairs_after_selected_reviews": 1,
+  "me_pairs_before_selected_reviews": 4,
+  "raw_hidden_loss_occurrences": 412,
+  "raw_map_entries": 1722,
+  "records": 1721,
+  "reproduced_research_commit": "536361b619bc4ab7c0392c84475e0ef23d10a954",
+  "source": {
+    "bytes": 1609137,
+    "git_blob_sha": "ef41c58802a3135f295072ba60fc0df39450a10c",
+    "sha256": "4da8e1f9693d30880ee505e56541fc189add70605bad88436c44a8e11a57764c",
+    "upstream_commit": "43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a",
+    "url": "https://raw.githubusercontent.com/mwenge/lineara.xyz/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/LinearAInscriptions.js"
+  },
+  "status": "Retrospective diagnostics; not a decipherment or independent epigraphic validation"
+}

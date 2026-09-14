@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+data/LinearAInscriptions.js
+data/corpus.json
+results/phase4_*.json
+results/console.txt
+results/tests.txt
+results/build_manifest.json
