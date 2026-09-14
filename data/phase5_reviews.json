@@ -1,0 +1,15 @@
+{
+  "upstream_commit": "43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a",
+  "scope": "Selected source checks; not a complete epigraphic re-edition.",
+  "exclude_as_independent_words": [
+    {"document":"SAMWa1","token_index":0,"form":"JA-SA","reason":"Younger identifies this as part of an impressed Cretan Hieroglyphic seal inscription, not an independent complete Linear A word.","source_path":"commentary/SAMWa1.html","source_blob":"f38e4ed7ae4d921afc0aca571be0fff20a937eff"},
+    {"document":"SAMWa1","token_index":1,"form":"SA-RA","reason":"This is editorially supplied continuation of the Hieroglyphic seal inscription JA-SA <-SA-RA>, not an independent Linear A word.","source_path":"commentary/SAMWa1.html","source_blob":"f38e4ed7ae4d921afc0aca571be0fff20a937eff"},
+    {"document":"PHWc46","token_index":0,"form":"*328-E","reason":"Commentary tabulates *328 E as logogram notation, not a securely established syllabic word.","source_path":"commentary/PHWc46.html","source_blob":"32bbd4cd9f0d36587bde505feb3a9201371800eb"},
+    {"document":"PHWc46","token_index":2,"form":"TI","reason":"Corpus presents *328-E approx TI, while commentary lists *328 E and no separate TI. Exclude from standalone TI evidence pending epigraphic reconciliation.","source_path":"commentary/PHWc46.html","source_blob":"32bbd4cd9f0d36587bde505feb3a9201371800eb"}
+  ],
+  "cautions": [
+    {"document":"PH(?)31b","form":"RI-RU-MA-TI","reason":"Digital item groups this as one expression followed by *21M. Reading-spec statuses are 'none', not affirmative certainty. Findsite is marked uncertain in the record ID. Original object not independently examined.","source_path":"items/PH(?)31b.html","source_blob":"1c488343c559368d318e5e616a567f6f50bc7b83"},
+    {"document":"ZA12a","form":"TI","reason":"TI has quantity conventionally read 13, but the tens sign is underlined and the quantity ends at a break. ZA12b supplies the less qualified TI 13 occurrence; these faces are not independent objects.","source_path":"commentary/ZA12.html","source_blob":"5b2c3b953f2a99889c8262ead9bd0d5573c309ea"},
+    {"document":"HT119","form":"TI","reason":"Commentary places TI with 7 in the logogram column. The full account sums to 159 rather than KU-RO 160. The model does not modify either number.","source_path":"commentary/HT119.html","source_blob":"ac429654c0fbd90dac75c399a0c9d5b945d61e34"}
+  ]
+}
