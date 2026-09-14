@@ -26,7 +26,7 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.13.5'
-      - name: Reproduce accounting, endings, and origin analyses
+      - name: Reproduce all registered analyses
         run: python research.py all --fetch
       - name: Check computational regressions and repository navigation
         shell: bash
@@ -37,5 +37,27 @@ jobs:
         with:
           name: linear-a-reproduced-analyses
           path: results/generated/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Archive the code and documentation used for this run
+        uses: actions/upload-artifact@v4
+        with:
+          name: linear-a-analysis-source
+          path: |
+            README.md
+            research.py
+            docs/
+            hypotheses/
+            archive/
+            reports/
+            scripts/*.py
+            tests/*.py
+            data/*.json
+            results/*.json
+            results/README.md
+            data/README.md
+            .gitignore
+            .github/workflows/reproduce.yml
+          include-hidden-files: true
           if-no-files-found: error
           retention-days: 30
