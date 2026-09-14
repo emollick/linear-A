@@ -8,14 +8,14 @@ Can the structure of Linear A accounts help identify the meanings of otherwise u
 
 | Hypothesis | Proposed reading | Evidence to examine | Status |
 |---|---|---|---|
-| [H1: adjusted assessment](hypotheses/adjusted-assessment.md) | `DA-DU-MA-TA`: **"reassessed allotment"** | HT 95 records the same six labels on both faces, with a uniform schedule on one and two changed amounts on the other. | Conjecture; one occurrence of the proposed term. |
-| [H2: administrative responsibility](hypotheses/administrative-responsibility.md) | `A-PA-RA-NE`: **"under Parane's responsibility"** | Compare `PA-RA-NE` in entries with `A-PA-RA-NE` in headings, and `TA-NA-TE / A-TA-NA-TE` within one tablet. | Conjecture; the proposed relationship is not independently identified. |
+| [H1: adjusted assessment](hypotheses/adjusted-assessment.md) | `DA-DU-MA-TA`: **"reassessed allotment"** | HT 95 records the same six labels on both faces, with a uniform schedule on one and two changed amounts on the other. | Conjecture; one occurrence of the proposed term. HT 86 carries the same labels under two other headings, which weakens the reading. |
+| [H2: administrative responsibility](hypotheses/administrative-responsibility.md) | `A-PA-RA-NE`: **"under Parane's responsibility"** | Compare `PA-RA-NE` in entries with `A-PA-RA-NE` in headings, and `TA-NA-TE / A-TA-NA-TE` within one tablet. | Conjecture; the proposed relationship is not independently identified, and the number of such pairs is within chance across the corpus. |
 
 Each hypothesis page presents the English reading, the exact claim being added, its source evidence, competing explanations, and observations that could support or undermine it. The proposed meanings are not outputs of the statistical tests.
 
 ## What the project actually establishes
 
-The computational work is most useful for testing how much evidence survives alternative readings and models. It recovers the **already-known** association of `KU-RO` with totals as a positive control, quantifies missing damage information in one digital corpus, and tests whether apparent word endings remain unusual under different reference models. It has not established a new grammatical meaning.
+The computational work is most useful for testing how much evidence survives alternative readings and models. It recovers the **already-known** association of `KU-RO` with totals as a positive control (also with the source's fraction values, which admit HT 104), quantifies missing damage information in one digital corpus, and tests whether apparent word endings remain unusual under different reference models. Two later checks test the premises of the hypotheses themselves: a heading comparison that follows the published cross-reference from HT 95 to HT 86, and a control for how many prefix or suffix pairs chance produces. It has not established a new grammatical meaning.
 
 The distinction matters: **reproducing a calculation does not validate a translation.** Familiar proposals such as "from Sybrita" and ritual interpretations of giving an offering come from prior scholarship, not discoveries made by this project. See the [evidence and claim register](docs/evidence.md).
 
@@ -40,7 +40,7 @@ python research.py all --fetch
 python -m unittest discover -s tests -v
 ```
 
-Individual commands are `accounting`, `endings`, and `origin`. The source is checksum-verified before analysis; downloaded JavaScript is parsed as data, not executed. Results are written to `results/generated/` with descriptive filenames and a run manifest. The [reproduction guide](docs/reproduction.md) explains options, exclusions, and the relationship to archived results.
+Individual commands are `accounting`, `endings`, `origin`, `headings`, `affixes`, and `fractions`. The source is checksum-verified before analysis; downloaded JavaScript is parsed as data, not executed. Results are written to `results/generated/` with descriptive filenames and a run manifest. The [reproduction guide](docs/reproduction.md) explains options, exclusions, and the relationship to archived results.
 
 ## Repository map
 
@@ -50,7 +50,7 @@ docs/         Evidence register, methods, reading guide, and reproduction
 data/         Source-linked reading decisions and a published origin hypothesis
 results/      Reference highlights and an output guide
 research.py   Topic-based command-line entry point
-scripts/      Existing analytical implementations, retained for compatibility
+scripts/      Analytical implementations; the numbered originals are retained unchanged
 tests/        Computational regression and repository-navigation checks
 archive/      Historical reports; not required to understand the current claims
 ```
@@ -59,4 +59,4 @@ archive/      Historical reports; not required to understand the current claims
 
 The input is the [Linear A Explorer corpus](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/LinearAInscriptions.js), fixed to one version. It derives from published editions; it is not an independent reading of the ancient objects or a guarantee of complete corpus coverage. References and reading qualifications accompany individual claims.
 
-This is AI-assisted exploratory research developed with ChatGPT at Ethan Mollick's request. No external scholarly review or first-in-literature claim is asserted. Source datasets and scholarly texts retain their original rights; this repository does not relicense them.
+This is AI-assisted exploratory research developed at Ethan Mollick's request, first with ChatGPT and later extended with Claude Code. No external scholarly review or first-in-literature claim is asserted. Source datasets and scholarly texts retain their original rights; this repository does not relicense them.

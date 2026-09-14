@@ -4,7 +4,7 @@
 
 ## Committed reference highlights
 
-[Accounting and corpus highlights](highlights.json) contain the 4,999-permutation reference results, the selected corpus counts, and their recorded provenance. [Ending and origin highlights](phase5_highlights.json) contain candidate pairs, adjusted and unadjusted statistics, and origin-comparison results. Their historical field names and test counts are retained; they refer to their recorded runs, not every later repository state.
+[Accounting and corpus highlights](highlights.json) contain the 4,999-permutation reference results, the selected corpus counts, and their recorded provenance. [Ending and origin highlights](phase5_highlights.json) contain candidate pairs, adjusted and unadjusted statistics, and origin-comparison results. [Extension highlights](extension_highlights.json) contain the HT 95 / HT 86 label matrix and heading census, the attested-remainder controls, and the fraction-aware summation results. Their historical field names and test counts are retained; they refer to their recorded runs, not every later repository state.
 
 These are computational results and candidate lists, **not validated translations**. The [hypothesis pages](../hypotheses/README.md) are the place to evaluate proposed meanings.
 
@@ -21,8 +21,11 @@ These are computational results and candidate lists, **not validated translation
 | `endings_summary.json` | Reference-model highlights and sample definitions |
 | `endings_details.json` | Complete final-sign tests, TI contexts, paired forms, and eligible type lists |
 | `origin_comparison.json` | Exact-tail and simple-JA predictions for the published origin hypothesis |
+| `heading_comparanda.json` | Anchor entry labels, the documents sharing them, inferred section headings, and the heading-word census |
+| `affix_controls.json` | Observed and expected attested remainders for every initial and final sign, with exact tails and Holm adjustment |
+| `fraction_accounting.json` | Fraction-aware blocks, matches, permutation diagnostics, unmatched positions, and exact sums hidden by damage |
 | `run_manifest.json` | Command, source checksums, parameters, and hashes of inputs and generated outputs |
 
-The new names are aliases for the unchanged analytical implementations' output files. The [reproduction guide](../docs/reproduction.md) gives the mapping. A single-topic command writes only its outputs; its manifest lists only those files even when the directory also contains older runs. Use a fresh output directory to keep separate experiments apart.
+For the original implementations the new names are aliases for their unchanged output files; the later implementations write these names directly. The [reproduction guide](../docs/reproduction.md) gives the mapping. A single-topic command writes only its outputs; its manifest lists only those files even when the directory also contains older runs. Use a fresh output directory to keep separate experiments apart.
 
 Generated data and logs are ignored by Git. GitHub workflow artifacts are temporary downloads, not permanent storage. Regeneration from the pinned source is the durable reproduction path; the recorded highlights stay committed.

@@ -36,6 +36,8 @@ Conventional sign readings, accounting labels, and editorial readings come from 
 | [Younger: HT 95](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/commentary/HT95.html) | H1's headings and quantities. The general assessment interpretation is prior scholarship, cited there to Schoep 2002, p. 106. |
 | [Younger: HT 96](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/commentary/HT96.html) and [HT 115](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/commentary/HT115.html) | H2's Parane comparisons, scribal assignments, and reading cautions. |
 | [Younger: ZA 10](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/commentary/ZA10.html) | H2's two Tanate forms on the same tablet. |
+| [Younger: HT 86](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/commentary/HT86.html) | The comparandum the HT 95 commentary cross-references: the same labels under `A-KA-RU` and `A-DU`. Blob `cb965d94a1850c34a34ecc25fdfdabbba5f56a6b`. |
+| Younger: [HT 9](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/commentary/HT9.html), [HT 13](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/commentary/HT13.html), [HT 85](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/commentary/HT85.html), [HT 94](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/commentary/HT94.html), [HT 100](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/commentary/HT100.html), [HT 118](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/commentary/HT118.html), [HT 119](https://github.com/mwenge/lineara.xyz/blob/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a/commentary/HT119.html) | Published notes on totals that do not equal their entries (HT 9a, HT 13, HT 94a, HT 118, HT 119), a lost addend (HT 100), and the damaged HT 85a total. These explain the unmatched positions in the summation searches; they are not project findings. |
 
 The reassessment and responsibility meanings are this project's conjectures, **not translations supplied by those sources**. They have not been validated or shown to be first in the literature.
 
@@ -51,6 +53,6 @@ The [Unicode Aegean Numbers chart](https://www.unicode.org/charts/nameslist/n_10
 
 ## Attribution and reuse
 
-The repository is AI-assisted research developed with ChatGPT at Ethan Mollick's request. The claims have not received external scholarly review. Citing this repository would document these particular proposals or calculations, not an accepted decipherment.
+The repository is AI-assisted research developed at Ethan Mollick's request, first with ChatGPT and later extended with Claude Code. The claims have not received external scholarly review. Citing this repository would document these particular proposals or calculations, not an accepted decipherment.
 
 Cite original editions for inscription readings and a specific repository commit for project calculations. Upstream datasets, museum materials, and scholarly texts retain their respective rights. No blanket relicensing of those sources is intended.

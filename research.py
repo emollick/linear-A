@@ -2,8 +2,9 @@
 """Run Linear A analyses by subject; preserve the underlying calculations.
 
 The numbered implementation files are kept unchanged for compatibility with
-archived reports. This interface provides descriptive output names and records
-exact input/output hashes. It is an analysis runner, not a translator.
+archived reports; later implementations carry descriptive names. This interface
+provides descriptive output names and records exact input/output hashes. It is
+an analysis runner, not a translator.
 """
 from __future__ import annotations
 
@@ -34,11 +35,23 @@ ANALYSES = {
     'origin': ('phase5_anchor.py', {
         'phase5_anchor_results.json': 'origin_comparison.json',
     }),
+    'headings': ('headings.py', {
+        'heading_comparanda.json': 'heading_comparanda.json',
+    }),
+    'affixes': ('affix_controls.py', {
+        'affix_controls.json': 'affix_controls.json',
+    }),
+    'fractions': ('fraction_accounting.py', {
+        'fraction_accounting.json': 'fraction_accounting.json',
+    }),
 }
+PERMUTATION_TOPICS = {'accounting', 'fractions'}
 INPUTS = [
     'research.py', 'scripts/phase4.py', 'scripts/phase5.py',
-    'scripts/phase5_anchor.py', 'data/editorial_reviews.json',
+    'scripts/phase5_anchor.py', 'scripts/headings.py', 'scripts/affix_controls.py',
+    'scripts/fraction_accounting.py', 'data/editorial_reviews.json',
     'data/phase5_reviews.json', 'data/phase5_semantic_anchors.json',
+    'data/heading_comparanda.json',
 ]
 
 
@@ -68,7 +81,7 @@ def run(topic: str, source: Path, output: Path, *, fetch: bool = False,
             script, mapping = ANALYSES[name]
             command = [sys.executable, str(ROOT / 'scripts' / script),
                        '--source', str(source), '--output', str(stage)]
-            if name == 'accounting':
+            if name in PERMUTATION_TOPICS:
                 command += ['--permutations', str(permutations), '--seed', str(seed)]
             completed = subprocess.run(command, capture_output=True, text=True,
                                        encoding='utf-8', cwd=ROOT, check=False)
@@ -88,7 +101,7 @@ def run(topic: str, source: Path, output: Path, *, fetch: bool = False,
             'analysis': topic, 'python': platform.python_version(),
             'source': provenance,
             'parameters': {'permutations': permutations, 'seed': seed}
-                          if 'accounting' in topics else {},
+                          if PERMUTATION_TOPICS & set(topics) else {},
             'input_sha256': {name: sha256(ROOT / name) for name in INPUTS},
             'output_sha256': {name: sha256(path) for name, path in pending.items()
                               if name.endswith('.json')},
@@ -108,8 +121,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument('--source', type=Path, default=ROOT / 'data/LinearAInscriptions.js')
     parser.add_argument('--output', type=Path, default=ROOT / 'results/generated')
     parser.add_argument('--permutations', type=int, default=4999,
-                        help='Accounting permutations; 0 omits permutation evidence')
-    parser.add_argument('--seed', type=int, default=20260914, help='Accounting random seed')
+                        help='Accounting/fraction permutations; 0 omits permutation evidence')
+    parser.add_argument('--seed', type=int, default=20260914,
+                        help='Accounting/fraction random seed')
     args = parser.parse_args(argv)
     try:
         manifest = run(args.analysis, args.source, args.output, fetch=args.fetch,

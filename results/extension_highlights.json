@@ -1,0 +1,328 @@
+{
+  "status": "Descriptive comparanda, chance controls, and a fraction-aware positive control; not validation of any translation.",
+  "research_commit": "TO_BE_RECORDED",
+  "source_commit": "43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a",
+  "headings": {
+    "anchor_entry_labels": [
+      "DA-ME",
+      "MI-NU-TE",
+      "SA-RU",
+      "KU-NI-SU",
+      "DI-DE-RU",
+      "QE-RA2-U"
+    ],
+    "documents_with_at_least_two_anchor_labels": [
+      "HT95a",
+      "HT95b",
+      "HT86a",
+      "HT86b"
+    ],
+    "HT86a_section_headings": {
+      "KU-NI-SU": "A-KA-RU",
+      "SA-RU": "A-KA-RU",
+      "DI-DE-RU": "A-KA-RU",
+      "DA-ME": "A-DU",
+      "MI-NU-TE": "A-DU"
+    },
+    "HT95_quantities": {
+      "HT95a": [
+        "10",
+        "10",
+        "20",
+        "10",
+        "10",
+        "7"
+      ],
+      "HT95b": [
+        "10",
+        "10",
+        "10",
+        "10",
+        "10",
+        "10"
+      ]
+    },
+    "HT86a_quantities": {
+      "DA-ME": "20",
+      "MI-NU-TE": "20",
+      "SA-RU": "20",
+      "KU-NI-SU": "20",
+      "DI-DE-RU": "20",
+      "QE-RA2-U": null
+    },
+    "heading_words": {
+      "A-DU": {
+        "documents": [
+          "HT133",
+          "HT85a",
+          "HT86a",
+          "HT88",
+          "HT92",
+          "HT95b",
+          "HT99a",
+          "KH11",
+          "KH23",
+          "TY3a"
+        ],
+        "first_row_occurrences": 7,
+        "heading_row_occurrences": 5,
+        "occurrences": 10,
+        "sites": [
+          "Haghia Triada",
+          "Khania",
+          "Tylissos"
+        ],
+        "unflagged_occurrences": 7
+      },
+      "A-KA-RU": {
+        "documents": [
+          "HT2",
+          "HT86a",
+          "HT86b"
+        ],
+        "first_row_occurrences": 3,
+        "heading_row_occurrences": 2,
+        "occurrences": 3,
+        "sites": [
+          "Haghia Triada"
+        ],
+        "unflagged_occurrences": 3
+      },
+      "DA-DU-MA-TA": {
+        "documents": [
+          "HT95a"
+        ],
+        "first_row_occurrences": 1,
+        "heading_row_occurrences": 1,
+        "occurrences": 1,
+        "sites": [
+          "Haghia Triada"
+        ],
+        "unflagged_occurrences": 1
+      }
+    }
+  },
+  "affix_controls": {
+    "all_corpus": {
+      "prefix_A": {
+        "sign": "A",
+        "types": 66,
+        "observed_attested": 6,
+        "expected_attested": 3.4181,
+        "p": 0.12162339747443075,
+        "holm_p": 1.0,
+        "pairs": [
+          "A-KA-RU",
+          "A-KI-RO",
+          "A-PA-RA-NE",
+          "A-SA-RA2",
+          "A-SI-KI-RA",
+          "A-TA-NA-TE"
+        ]
+      },
+      "prefix_I": {
+        "sign": "I",
+        "types": 25,
+        "observed_attested": 4,
+        "expected_attested": 1.389,
+        "p": 0.04450918462467364,
+        "holm_p": 1.0,
+        "pairs": [
+          "I-DA-MA-TE",
+          "I-QA-*118",
+          "I-RU-JA",
+          "I-TA-JA"
+        ]
+      },
+      "suffix_JA": {
+        "sign": "JA",
+        "types": 22,
+        "observed_attested": 5,
+        "expected_attested": 1.8157,
+        "p": 0.027674669951471546,
+        "holm_p": 1.0,
+        "pairs": [
+          "*306-TU-JA",
+          "A-MA-JA",
+          "A-SE-JA",
+          "KU-PA-JA",
+          "PA-SE-JA"
+        ]
+      },
+      "suffix_TI": {
+        "sign": "TI",
+        "types": 23,
+        "observed_attested": 3,
+        "expected_attested": 1.2603,
+        "p": 0.12129957028205575,
+        "holm_p": 1.0,
+        "pairs": [
+          "DA-KU-SE-NE-TI",
+          "JA-KU-TI",
+          "RI-RU-MA-TI"
+        ]
+      }
+    },
+    "tablets": {
+      "prefix_A": {
+        "sign": "A",
+        "types": 41,
+        "observed_attested": 6,
+        "expected_attested": 1.2701,
+        "p": 0.0010451920842132032,
+        "holm_p": 0.06271152505279219,
+        "pairs": [
+          "A-KA-RU",
+          "A-KI-RO",
+          "A-PA-RA-NE",
+          "A-SA-RA2",
+          "A-SI-KI-RA",
+          "A-TA-NA-TE"
+        ]
+      },
+      "suffix_JA": {
+        "sign": "JA",
+        "types": 16,
+        "observed_attested": 3,
+        "expected_attested": 1.1655,
+        "p": 0.10466665980508659,
+        "holm_p": 1.0,
+        "pairs": [
+          "*306-TU-JA",
+          "A-SE-JA",
+          "KU-PA-JA"
+        ]
+      },
+      "suffix_TI": {
+        "sign": "TI",
+        "types": 14,
+        "observed_attested": 2,
+        "expected_attested": 0.8378,
+        "p": 0.2011380275534772,
+        "holm_p": 1.0,
+        "pairs": [
+          "DA-KU-SE-NE-TI",
+          "RI-RU-MA-TI"
+        ]
+      }
+    },
+    "signs_below_0_05_after_holm": {
+      "all": {
+        "prefix": [],
+        "suffix": []
+      },
+      "tablets": {
+        "prefix": [],
+        "suffix": []
+      }
+    },
+    "tested_signs": {
+      "all": {
+        "prefix": 66,
+        "suffix": 64
+      },
+      "tablets": {
+        "prefix": 60,
+        "suffix": 60
+      }
+    }
+  },
+  "fractions": {
+    "permutations": 4999,
+    "seed": 20260914,
+    "eligible_rows": 758,
+    "eligible_fractional_rows": 152,
+    "blocks_of_at_least_three": 97,
+    "tested_forms": 148,
+    "KU_RO_literal": {
+      "matching_objects": 8,
+      "object_ids": [
+        "HT104",
+        "HT11",
+        "HT117",
+        "HT127",
+        "HT88",
+        "HT89",
+        "HT9",
+        "HT94"
+      ],
+      "objects_with_fractional_matches": [
+        "HT104"
+      ],
+      "permutation_p": 0.0002,
+      "max_statistic_adjusted_p": 0.0002
+    },
+    "KU_RO_eligible_positions_literal": 19,
+    "KU_RO_excluding_HT127": {
+      "matching_objects": 7,
+      "object_ids": [
+        "HT104",
+        "HT11",
+        "HT117",
+        "HT88",
+        "HT89",
+        "HT9",
+        "HT94"
+      ],
+      "permutation_p": 0.0002,
+      "max_statistic_adjusted_p": 0.0002
+    },
+    "KU_RO_eligible_positions_excluding_HT127": 18,
+    "null_max_score_histogram_literal": {
+      "1": 3020,
+      "2": 1319,
+      "3": 526,
+      "4": 108,
+      "5": 26
+    },
+    "null_max_score_histogram_excluding_HT127": {
+      "1": 3280,
+      "2": 1274,
+      "3": 366,
+      "4": 75,
+      "5": 4
+    },
+    "objects_matched_only_with_fractions": [
+      "HT104"
+    ],
+    "exact_sums_hidden_by_damage": [
+      {
+        "document": "HT85a",
+        "form": "KU-RO",
+        "terms": [
+          "12",
+          "12",
+          "6",
+          "24",
+          "5",
+          "3",
+          "4"
+        ],
+        "total": "66"
+      }
+    ],
+    "unmatched_KU_RO_positions_with_fractions": [
+      {
+        "document": "HT9a",
+        "written": "31+3/4",
+        "sum_of_preceding_block_entries": "31"
+      },
+      {
+        "document": "HT13",
+        "written": "130+1/2",
+        "sum_of_preceding_block_entries": "125+1/2"
+      },
+      {
+        "document": "HT123+124a",
+        "written": "93+1/2",
+        "sum_of_preceding_block_entries": "20"
+      }
+    ]
+  },
+  "limits": [
+    "Heading sections are inferred from parsed rows; they are a reading aid, not an edition.",
+    "Attested-remainder controls compare edge signs with words of the same length; an excess would show recurrence, not a morpheme or a meaning.",
+    "Fraction values are the source's conventional exact labels; approximate and unassigned signs interrupt runs.",
+    "Permutation diagnostics are retrospective reference-model tails, not probabilities that a reading is correct."
+  ]
+}

@@ -51,7 +51,7 @@ class NavigationTests(unittest.TestCase):
 class InterfaceTests(unittest.TestCase):
     def test_outputs_have_unique_descriptive_names(self):
         names = [new for _, mapping in research.ANALYSES.values() for new in mapping.values()]
-        self.assertEqual(len(names), 7)
+        self.assertEqual(len(names), 10)
         self.assertEqual(len(set(names)), len(names))
         self.assertFalse(any('phase' in name for name in names))
 

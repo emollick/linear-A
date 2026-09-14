@@ -1,0 +1,26 @@
+{
+  "upstream_commit": "43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a",
+  "status": "Source-linked comparison targets for the heading analysis. The readings and cross-references are published; the comparison is descriptive and assigns no meanings.",
+  "anchor": {
+    "hypothesis": "H1",
+    "documents": ["HT95a", "HT95b"],
+    "reason": "H1 compares the two faces of HT 95. The entry labels used for the corpus-wide comparison are collected from these records, not typed in by hand.",
+    "source_path": "commentary/HT95.html",
+    "source_blob": "82579fb7c801c1d9377c891c48b6dce269b87e83",
+    "published_cross_reference": "Younger: the same names (place names?) recur on HT 86; given the whole numbers and repetitions of 10, this document probably records assessments (Schoep 2002, 106)."
+  },
+  "comparison": {
+    "documents": ["HT86a", "HT86b"],
+    "reason": "Named by the published commentary on HT 95 as carrying the same names. HT 86a places them under two headings on one face.",
+    "source_path": "commentary/HT86.html",
+    "source_blob": "cb965d94a1850c34a34ecc25fdfdabbba5f56a6b",
+    "published_note": "Younger: the same names recur on HT 95; given the large quantities and whole numbers, this document probably records assessments (Schoep 2002, 106); the document is a double palimpsest (Schoep 2002, 79)."
+  },
+  "heading_words": ["DA-DU-MA-TA", "A-DU", "A-KA-RU"],
+  "cautions": [
+    "Section headings are inferred from parsed rows without quantities; they are a reading aid, not an edition of the layout.",
+    "Label matches are exact sign-string comparisons in the pinned digital transcription.",
+    "The published assessment interpretation belongs to Schoep 2002 as cited by Younger; the source's own gloss field is not used.",
+    "QA-RA2-WA on HT 86a and QE-RA2-U on HT 95 are not treated as the same label; any relation between them is left to the reader."
+  ]
+}

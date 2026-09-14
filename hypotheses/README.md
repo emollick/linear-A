@@ -6,13 +6,15 @@ These pages propose meanings rather than certify translations. **Both hypotheses
 
 | ID | Proposed meaning | Inscription(s) | Main unresolved question |
 |---|---|---|---|
-| [H1](adjusted-assessment.md) | `DA-DU-MA-TA`: "reassessed allotment" | HT 95a/b | Does the heading encode an accounting state, or name an entity? |
-| [H2](administrative-responsibility.md) | Selected `A-X` forms: "on X's account / under X's responsibility" | HT 96, HT 115, ZA 10 | Are the pairs forms of the same entity, and what relationship does the added material express? |
+| [H1](adjusted-assessment.md) | `DA-DU-MA-TA`: "reassessed allotment" | HT 95a/b | Does the heading encode an accounting state, or name an entity or section? HT 86 carries the same labels under two other headings. |
+| [H2](administrative-responsibility.md) | Selected `A-X` forms: "on X's account / under X's responsibility" | HT 96, HT 115, ZA 10 | Are the pairs forms of the same entity? Their number is within chance across the corpus. |
 
 H2 has two English applications, not two independent discoveries: "under Parane's responsibility" and "Tanate: two ... on Tanate's account: one."
 
 ## How to evaluate a proposal
 
 Start with the actual sign sequence and its reading qualifications. Then distinguish what the account shows from what the proposed English adds. Each page supplies alternatives and a test that would help discriminate between them. A plausible account of an example used to construct the hypothesis is not an independent prediction.
+
+Two later checks bear on the premises rather than the meanings: the [heading comparison](../docs/evidence.md#headings-ht-86-and-a-du) asks whether HT 95's contrast is specific to that tablet, and the [attested-remainder control](../docs/evidence.md#affix-pairs-what-chance-produces) asks whether the `A-X / X` pairs outnumber coincidence. Both weaken the case as first presented.
 
 The arithmetic and ending analyses do **not** choose these meanings. They supply constraints and identify false positives. Existing interpretations such as `KU-RO` as a total marker, or the museum's probable Sybrita identification, are [prior evidence](../docs/evidence.md), not original translations in this section.
